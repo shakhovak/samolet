@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarStart</title>
+</head>
+<body>
+    <h1>StarStart Flask API для обнаружения скидок</h1>
+    <h2>Загрузите файл в формате csv</h2>
+    <h3>Файл должен соответствовать формату, который использовался в соревновании и включать столбцы с текстом и лейблом</h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+<body>
+    <h2>Используйте пример</h2>
+    <h3>Если нет файла, то можно использовать тестовые данные из соревнования, нажмите кнопку use_template, подождите минуту</h3>
+    <form action="/process_template" method="post" enctype="multipart/form-data">
+          <button type="submit">Use_template</button>
+    </form>
+</body>
+</html>
